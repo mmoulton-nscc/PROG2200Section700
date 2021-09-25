@@ -23,7 +23,7 @@ namespace Lab1
 
     //        for (int y = 0; y < students; y++)
     //        {
-    //            Console.WriteLine("\nName: {0} \nGrade: {1}", studentData[0,y], studentData[1,y]);
+    //            Console.WriteLine("\nName: {0} \nGrade: {1}", studentData[0, y], studentData[1, y]);
     //        }
     //    }
     //}
