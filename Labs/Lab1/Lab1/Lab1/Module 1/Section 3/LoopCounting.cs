@@ -4,32 +4,32 @@ namespace Lab1
 {
     class LoopCounting
     {
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
 
-        //    int loop = 0; // track number of loops independtly of automatic for loop
+            int loop = 0; // track number of loops independtly of automatic for loop
 
-        //    for (int x = 1; loop < 5; x++) //this took me so long to figure out i don't think I ever did an independent counter for a for loop before
-        //    {
-        //        Console.WriteLine(x);
+            for (int x = 1; loop < 5; x++) //this took me so long to figure out i don't think I ever did an independent counter for a for loop before
+            {
+                Console.WriteLine(x);
 
-        //        if (x == 10) //if x = 10 start counting down
-        //        {
-        //            for (int y = 10; y >= 1; y--)
-        //            {
-        //                Console.WriteLine(y);
-        //            }
+                if (x == 10) //if x = 10 start counting down
+                {
+                    for (int y = 10; y >= 1; y--)
+                    {
+                        Console.WriteLine(y);
+                    }
 
-        //            //AFTER loop, set x to 0 and increment independent loop counter - x to 0 because it will x++ to 1 at the end of the exterior loop
-        //            x = 0;
-        //            loop++;
-        //        }
+                    //AFTER loop, set x to 0 and increment independent loop counter - x to 0 because it will x++ to 1 at the end of the exterior loop
+                    x = 0;
+                    loop++;
+                }
 
-        //    }
-
-
+            }
 
 
-        //}
+
+
+        }
     }
 }
