@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Polymorphism
 {
-    public class Employee
+    public class Employee : IWorker
     {
-        public virtual string CalculateWeeklySalary(int weeklyHours, int wage)
+        public string CalculateWeeklySalary(int weeklyHours, int wage)
         {
             var salary = 40 * wage;
             string result = $"This ANGRY EMPLOYEE worked {weeklyHours} hrs. " +
@@ -18,9 +18,9 @@ namespace Polymorphism
         }
     }
 
-    public class Contractor : Employee
+    public class Contractor : IWorker
     {
-        public override string CalculateWeeklySalary(int weeklyHours, int wage)
+        public string CalculateWeeklySalary(int weeklyHours, int wage)
         {
             var salary = weeklyHours * wage;
             string result = $"This HAPPY CONTRACTOR worked {weeklyHours} hrs. " +
@@ -42,9 +42,9 @@ namespace Polymorphism
 
             var mock = new Mock<Utils>();
             mock.Setup(m => m.GetMockEmployees()).Returns(() =>
-             new List<Employee> { new Contractor(), new Employee() });
+             new List<IWorker> { new Contractor(), new Employee() });
 
-            List<Employee> employees = mock.Object.GetMockEmployees();
+            List<IWorker> employees = mock.Object.GetMockEmployees();
 
             foreach (var e in employees)
             {
@@ -63,7 +63,7 @@ namespace Polymorphism
         //    return everyone;
         //}
 
-        public virtual List<Employee> GetMockEmployees()
+        public virtual List<IWorker> GetMockEmployees()
         {
             throw new NotImplementedException();
         }
