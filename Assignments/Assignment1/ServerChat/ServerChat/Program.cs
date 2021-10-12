@@ -7,17 +7,21 @@ namespace ServerChat
         static void Main(string[] args)
         {
             //Run as Client vs Server
-            Console.WriteLine("Listening For Messages");
+            while (true)
+            {
+                Console.WriteLine("Listening For Messages");
 
-            //User Input Mode when I key pressed
-            var userKey = Console.ReadKey();
+                //User Input Mode when I key pressed
+                ConsoleKeyInfo userKey = Console.ReadKey(); //blocking statement
 
-            //Display incoming message
+                //Display incoming message
 
-            //Allow for input
+                //Allow for input
 
-            //Let user quit
-            Console.WriteLine($"You Typed {userKey.Key}");
+                //Let user quit
+                Console.WriteLine($"You Typed {userKey.Key}");
+            }
+            
         }
     }
 }
