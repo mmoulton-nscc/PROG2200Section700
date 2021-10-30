@@ -2,6 +2,8 @@
 using System;
 using System.Net.Sockets;
 using System.Reflection;
+using ChatLib;
+using ChatConsole;
 //using Castle.Components.DictionaryAdapter.Xml;
 
 
