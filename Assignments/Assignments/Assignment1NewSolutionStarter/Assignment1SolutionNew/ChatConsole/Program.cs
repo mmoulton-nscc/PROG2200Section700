@@ -11,6 +11,8 @@ namespace ChatConsole
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Test");
+            Console.ReadLine();
             if (args.Contains("-server"))
             {
                 Server server = new Server();
